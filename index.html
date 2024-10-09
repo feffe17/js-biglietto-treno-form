@@ -9,7 +9,7 @@
 <body>
     
     <div class="container my-5">
-        <form class="row g-3">
+        <form id="formPrice" class="row g-3">
             <div class="col-md-4">
               <label for="inputName4" class="form-label">Nome e cognome</label>
               <input type="text" class="form-control" id="inputName4">
@@ -19,12 +19,12 @@
               <input type="text" class="form-control" id="inputKm4">
             </div>
             <div class="col-md-4">
-              <label for="inputState" class="form-label">State</label>
+              <label for="inputState" class="form-label">Età</label>
               <select id="inputState" class="form-select">
                 <option selected>Choose...</option>
-                <option>Minore di 18 anni (-20%)</option>
-                <option>Maggiore di 18 anni</option>
-                <option>Maggiore di 65 anni (-40%)</option>
+                <option id="u18">Minore di 18 anni (-20%)</option>
+                <option id="o18">Maggiore di 18 anni</option>
+                <option id="o65">Maggiore di 65 anni (-40%)</option>
               </select>
             </div>
             <div class="col-12">

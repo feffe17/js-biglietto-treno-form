@@ -27,3 +27,49 @@
 // } else{
 //     alert("il prezzo del biglietto è di " + prezzo.toFixed(2) + "€");
 // }
+
+const form = document.getElementById("formPrice");
+
+function convertEta(string) {
+    if (string === "Minore di 18 anni (-20%)") {
+        return variabileEta = 1;
+    }
+    else if (string === "Maggiore di 65 anni (-40%)"){
+        return variabileEta = 2;
+    }
+    else {
+        return variabileEta = 3;
+    }
+}
+
+form.addEventListener('submit', function(event) {
+    let chilometri = document.getElementById("inputKm4").value;
+    let eta = document.getElementById("inputState").value;
+    let variabileEta = 0;
+    let prezzo;
+    
+    chilometri = parseInt(chilometri);
+    variabileEta = convertEta(eta);
+   
+
+    event.preventDefault();
+    console.log(chilometri , eta , variabileEta);
+
+    if (variabileEta == 1) {
+        prezzo = (chilometri * 0.21 );
+        prezzo = prezzo - ((prezzo / 100) * 20);
+        prezzo = prezzo.toFixed(2);
+    } else if (variabileEta == 2){
+        prezzo = (chilometri * 0.21 );
+        prezzo = prezzo - ((prezzo / 100) * 40);
+        prezzo = prezzo.toFixed(2);
+    } else{
+        prezzo = (chilometri * 0.21 );
+        prezzo = prezzo.toFixed(2);
+    }
+    console.log(prezzo);
+    
+});
+
+
+
