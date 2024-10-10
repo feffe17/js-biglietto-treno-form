@@ -28,7 +28,7 @@ function convertEta(string) {
 }
 
 form.addEventListener('submit', function(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
     // Recupera i valori dai campi del form
     let nome = document.getElementById("inputName4").value;
