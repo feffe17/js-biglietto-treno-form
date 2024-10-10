@@ -28,7 +28,7 @@ function convertEta(string) {
 }
 
 form.addEventListener('submit', function(event) {
-    // event.preventDefault();
+    event.preventDefault();
 
     // Recupera i valori dai campi del form
     let nome = document.getElementById("inputName4").value;
@@ -72,6 +72,8 @@ form.addEventListener('submit', function(event) {
     // Aggiorna il DOM con il prezzo e il nome del passeggero
     passeggero.textContent = nome;
     prezzoFinale.textContent = `${prezzo}€`;
+
+    form.reset();
 });
 
 
